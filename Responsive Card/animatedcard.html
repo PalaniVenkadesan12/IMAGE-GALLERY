@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Card</title>
+
+    <style>
+        *
+        {
+          
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html,body
+        {
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+
+        }
+
+        .main
+        {
+            margin-top: 110px;
+            margin-bottom: 110px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card
+        {
+            width: 300px;
+            height: 365px;
+            padding: 2rem 1rem;
+            background: #f0f0f0;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            margin: 20px;
+            box-shadow: 0px 6px 10px rgb(0,0,0,0.4);
+            transition: 0.5s ease-in;
+        }
+
+        .card:hover
+        {
+            transform: translateY(20px);
+        }
+
+        .card::before
+        {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 1000%;
+            height: 100%;
+            background: linear-gradient(to bottom,rgb(255,255,0,0.5),rgba(255,204,0,1));
+            z-index: index 12;
+            opacity: 0;
+            transition: 0.5s all;
+        }
+
+        .card:hover::before
+        {
+            opacity: 1;
+        }
+
+        .card img
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .card .content
+        {
+            position: relative;
+            z-index: 6;
+            color: white;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.05s all; 
+        }
+        .card:hover .content
+        {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        .card .content h3
+        {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .card .content p
+        {
+            letter-spacing: 1px;
+            font-size: 16px;
+            margin-top: 9px;
+            margin-bottom: 21px;
+        }
+
+        .card .content .btn
+        {
+            text-decoration: none;
+            padding: 0.4rem 1.1rem;
+            background: black;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.4s case-in-out;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+        <div class="card">
+            <img src="../IMAGE-GALLERY/bg1.jpg" alt="">
+            <div class="content">
+               <h3>Card 1</h3>
+               <p>Lorem ipsum dolor sit amet 
+                consectetur, adipisicing elit. Officiis,</p>
+               <a href="" class="btn">Read</a>
+            </div>
+
+        </div>
+        <div class="card">
+            <img src="../IMAGE-GALLERY/bg2.webp" alt="">
+            <div class="content">
+               <h3>Card 2</h3>
+               <p>Lorem ipsum dolor sit amet 
+                consectetur, adipisicing elit. Officiis, </p>
+                <a href="" class="btn">Read</a>
+            </div>
+
+        </div>
+        <div class="card">
+            <img src="../IMAGE-GALLERY/bg3.jpg" alt="">
+            <div class="content">
+               <h3>Card 3</h3>
+               <p>Lorem ipsum dolor sit amet 
+                consectetur, adipisicing elit. Officiis, </p>
+                <a href="" class="btn">Read</a>
+
+            </div>
+
+        </div>
+        <div class="card">
+            <img src="../IMAGE-GALLERY/bg4.webp" alt="">
+            <div class="content">
+               <h3>Card 4</h3>
+               <p>Lorem ipsum dolor sit amet 
+                consectetur, adipisicing elit. Officiis, </p>
+                <a href="" class="btn">Read</a>
+
+            </div>
+
+        </div>
+        <div class="card">
+            <img src="../IMAGE-GALLERY/bg5.avif" alt="">
+            <div class="content">
+               <h3>Card 5</h3>
+               <p>Lorem ipsum dolor sit amet 
+                consectetur, adipisicing elit. Officiis, </p>
+                <a href="" class="btn">Read</a>
+
+            </div>
+
+        </div>
+        <div class="card">
+            <img src="../IMAGE-GALLERY/bg6.jpg" alt="">
+            <div class="content">
+               <h3>Card 6</h3>
+               <p>Lorem ipsum dolor sit amet 
+                consectetur, adipisicing elit. Officiis, </p>
+                <a href="" class="btn">Read</a>
+
+            </div>
+
+        </div>
+        <div class="card">
+            <img src="../IMAGE-GALLERY/bg7.jpg" alt="">
+            <div class="content">
+               <h3>Card 7</h3>
+               <p>Lorem ipsum dolor sit amet 
+                consectetur, adipisicing elit. Officiis, </p>
+                <a href="" class="btn">Read</a>
+
+            </div>
+
+        </div>
+        <div class="card">
+            <img src="../IMAGE-GALLERY/bg10.jpg" alt="">
+            <div class="content">
+               <h3>Card 8</h3>
+               <p>Lorem ipsum dolor sit amet 
+                consectetur, adipisicing elit. Officiis, </p>
+                <a href="" class="btn">Read</a>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
